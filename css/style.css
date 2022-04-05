@@ -1,0 +1,58 @@
+body, html {
+  height: 100%;
+  background-image: url(/img/Maroon\ Bells.png);
+  background-size: 100%;
+}
+
+body {
+  background-color: coral;
+  border-style: dotted;
+  border-width: 5px;
+  border-color: aliceblue;
+}
+
+header {
+  background-color: aqua;
+  margin-bottom: 50px;
+  width: 100%
+  outline-style: dotted;
+}
+
+header h1 {
+  font-size: 60pt;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+  background-color: crimson;
+  border-style: solid;
+  border-color: aliceblue;
+}
+
+div {
+  border: 5px;
+  border-style: dashed;
+  padding: 10px;
+}
+
+div img {
+  max-width: 8%;
+  max-height: 100%;
+  float: left;
+  margin-right: 10px;
+  border: 3px;
+  border-color: hotpink;
+  border-style: solid;
+}
+
+p {
+  font-size: 20pt;
+}
+
+footer {
+  background-color: darkseagreen;
+  border-style: ridge;
+  border-width: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
