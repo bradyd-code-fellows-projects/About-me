@@ -2,13 +2,11 @@ body, html {
   height: 100%;
   background-image: url(/img/Maroon\ Bells.png);
   background-size: 100%;
+  width: 100%;
 }
 
 body {
   background-color: coral;
-  border-style: dotted;
-  border-width: 5px;
-  border-color: aliceblue;
 }
 
 header {
@@ -31,22 +29,21 @@ main {
 
 div {
   border: 5px;
-  border-style: dashed;
   padding: 10px;
+  height: 15vw;
+  width: 98%;
 }
 
 div img {
-  max-width: 8%;
-  max-height: 100%;
+  max-width: 10vw;
+  max-height: 100vw;
   float: left;
   margin-right: 10px;
-  border: 3px;
-  border-color: hotpink;
-  border-style: solid;
 }
 
 p {
-  font-size: 20pt;
+  font-size: 2vw;
+  overflow-wrap: normal;
 }
 
 footer {
