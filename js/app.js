@@ -55,19 +55,21 @@ function q3(){
 }
 q3();
 
-function 
-let questionFour = prompt('Is it true that I have never served in the military?');
-if (questionFour === 'yes' || questionFour === 'y') {
-  //console.log('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
-  alert('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
-} else if (questionFour === 'no' || questionFour === 'n') {
-  //console.log('Correct answer! I served in the U.S. Marine Corps from 2012 to 2016.');
-  alert('Correct answer! I served in the U.S. Marine Corps from 2012 to 2016.');
-  numberOfCorrectAnswers++;
-} else {
-  //console.log('Please answer with Yes or No');
-  alert('Please answer with Yes or No');
+function q4(){
+  let questionFour = prompt('Is it true that I have never served in the military?');
+  if (questionFour === 'yes' || questionFour === 'y') {
+    //console.log('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
+    alert('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
+  } else if (questionFour === 'no' || questionFour === 'n') {
+    //console.log('Correct answer! I served in the U.S. Marine Corps from 2012 to 2016.');
+    alert('Correct answer! I served in the U.S. Marine Corps from 2012 to 2016.');
+    numberOfCorrectAnswers++;
+  } else {
+    //console.log('Please answer with Yes or No');
+    alert('Please answer with Yes or No');
+  }
 }
+q4();
 
 let questionFive = prompt('Do I prefer pineapple on my pizza?');
 if (questionFive === 'yes' || questionFive === 'y') {
