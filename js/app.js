@@ -69,51 +69,48 @@ if (questionFive === 'yes' || questionFive === 'y') {
   alert('Please answer with Yes or No');
 }
 
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max);
-}
+// function getRandomNumber(max) {
+//   return Math.floor(Math.random() * max);
+// }
 
-let questionSix = prompt('Guess my favorite number');
+// let randomNumber = getRandomNumber(10);
+// console.log(randomNumber);
+// let numberOfAttempts = 0;
 
-let randomNumber = getRandomNumber(10);
-console.log(randomNumber);
+let randomNumber = 7;
+
 let numberOfAttempts = 0;
 
-while (questionSix !== randomNumber && numberOfAttempts < 5) {
-  if (questionSix < randomNumber) {
-    questionSix = prompt('Too low, guess again.');
+for (let i = 0; i < 4; i++) {
+  let questionSix = parseInt(prompt('Guess my favorite number'));
+  if (questionSix === randomNumber) {
+    alert('Nice guess! It is 7! It took you to guess correctly.');
+    break;
+  } else if (questionSix > randomNumber && i < 3) {
+    alert('Too high, guess again');
+  } else if (questionSix < randomNumber && i < 3) {
+    alert('Too low, guess again');
   }
-  if (questionSix > randomNumber) {
-    questionSix = prompt('Too high, guess again');
+  if (i === 3 && questionSix !== randomNumber) {
+    alert('Sorry, you\'ve run out of guess attempts, the correct answer is 7');
   }
-  numberOfAttempts ++;
-}
-
-if (questionSix === randomNumber) {
-  alert(`Nice guess! It is ${randomNumber}! It took you ${numberOfAttempts} to guess correctly.`);
-  numberOfCorrectAnswers++;
-} else {
-  alert(`Sorry, you have run out of guesses! My favorite number is ${randomNumber}.`);
 }
 
 let myFavoriteFoods = ['Steak', 'Pizza', 'Ice Cream', 'Korean BBQ', 'Orange Chicken', 'Gnocchi', 'Cheesecake', 'Anything with cheese'];
 
-let questionSeven = prompt('Try to guess a favorite food of mine');
 
-let favoriteFoodGuesses = 0;
-for (let i = 0; i < myFavoriteFoods.length; i++) {
-  let oneFavoriteFood = myFavoriteFoods[i];
-  if (questionSeven !== oneFavoriteFood && favoriteFoodGuesses < 7) {
-    prompt('Nope, guess again.');
-    favoriteFoodGuesses++;
-  } else if (questionSeven === oneFavoriteFood) {
-    alert(`Correct! ${oneFavoriteFood} is one of my favorite foods!`);
-    numberOfCorrectAnswers++;
-    break;
-  } else {
-    alert(`Sorry, you've run out of guesses. Here is a list of some of my favorite foods: ${myFavoriteFoods}.`);
+for (let i = 0; i < 6; i++) {
+  let questionSeven = prompt('Try to guess a favorite food of mine');
+  for (let j = 0; j < myFavoriteFoods.length; j++) {
+    if (questionSeven === myFavoriteFoods[j]) {
+      alert(`Yes! I love ${myFavoriteFoods[j]}!`);
+      i = 6;
+      break;
+    }
   }
 }
+
+alert(`Here are all of my favorite foods: ${myFavoriteFoods}`);
 
 
 alert(`Thanks for playing along, ${siteVisitor}! You answered ${numberOfCorrectAnswers} questions correctly out of 7! Feel free to browse this page of mine now and learn a little more about me!`);
