@@ -6,25 +6,23 @@ let siteVisitor = prompt('Hey! What\'s your name?');
 alert(`Welcome ${siteVisitor}, let's play a guessing game. Please answer Yes or No`);
 
 function q1(){
-
-let questionOne = prompt('Was I born where I currently live, in Pueblo, Colorado?');
-if (questionOne === 'yes' || questionOne === 'y') {
+  let questionOne = prompt('Was I born where I currently live, in Pueblo, Colorado?').toLowerCase();
+  if (questionOne === 'yes' || questionOne === 'y') {
   //console.log('That\'s correct! I was born and raised in Pueblo, Colorado');
-  alert('That\'s correct! I was born and raised in Pueblo, Colorado');
-  numberOfCorrectAnswers++;
-} else if (questionOne === 'no' || questionOne === 'n') {
+    alert('That\'s correct! I was born and raised in Pueblo, Colorado');
+    numberOfCorrectAnswers++;
+  } else if (questionOne === 'no' || questionOne === 'n') {
   //console.log('Actually, I really was born and raised in Pueblo, Colorado.');
-  alert('Actually, I really was born and raised in Pueblo, Colorado.');
-} else {
+    alert('Actually, I really was born and raised in Pueblo, Colorado.');
+  } else {
   //console.log('Please answer with Yes or No');
-  alert('Please answer with Yes or No');
-}
+    alert('Please answer with Yes or No');
+  }
 }
 q1();
 
 function q2(){
-
-  let questionTwo = prompt('Do I have a pet bulldog?');
+  let questionTwo = prompt('Do I have a pet bulldog?').toLowerCase();
   if (questionTwo === 'yes' || questionTwo === 'y') {
     //console.log('Well I do have a dog, but she\'s a German Shepherd!');
     alert('Well I do have a dog, but she\'s a German Shepherd!');
@@ -40,7 +38,7 @@ function q2(){
 q2();
 
 function q3(){
-  let questionThree = prompt('Do I have any siblings?');
+  let questionThree = prompt('Do I have any siblings?').toLowerCase();
   if (questionThree === 'yes'|| questionThree === 'y') {
     //console.log('Yeah! I have 1 older sister, who is a nurse practitioner!');
     alert('Yeah! I have 1 older sister, who is a nurse practitioner!');
@@ -56,7 +54,7 @@ function q3(){
 q3();
 
 function q4(){
-  let questionFour = prompt('Is it true that I have never served in the military?');
+  let questionFour = prompt('Is it true that I have never served in the military?').toLowerCase();
   if (questionFour === 'yes' || questionFour === 'y') {
     //console.log('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
     alert('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
@@ -72,7 +70,7 @@ function q4(){
 q4();
 
 function q5(){
-  let questionFive = prompt('Do I prefer pineapple on my pizza?');
+  let questionFive = prompt('Do I prefer pineapple on my pizza?').toLowerCase();
   if (questionFive === 'yes' || questionFive === 'y') {
     //console.log('Ewww! No! I most certainly do not like pineapple on my pizza.');
     alert('Ewww! No! I most certainly do not like pineapple on my pizza.');
@@ -91,13 +89,13 @@ function q6(){
   function getRandomNumber(max) {
     return Math.floor(Math.random() * max);
   }
-  
+
   let questionSix = prompt('Guess my favorite number');
-  
+
   let randomNumber = getRandomNumber(10);
   console.log(randomNumber);
   let numberOfAttempts = 0;
-  
+
   while (questionSix !== randomNumber && numberOfAttempts < 5) {
     if (questionSix < randomNumber) {
       questionSix = prompt('Too low, guess again.');
@@ -107,7 +105,7 @@ function q6(){
     }
     numberOfAttempts ++;
   }
-  
+
   if (questionSix === randomNumber) {
     alert(`Nice guess! It is ${randomNumber}! It took you ${numberOfAttempts} to guess correctly.`);
     numberOfCorrectAnswers++;
@@ -119,9 +117,9 @@ q6();
 
 function q7(){
   let myFavoriteFoods = ['Steak', 'Pizza', 'Ice Cream', 'Korean BBQ', 'Orange Chicken', 'Gnocchi', 'Cheesecake', 'Anything with cheese'];
-  
+
   let questionSeven = prompt('Try to guess a favorite food of mine');
-  
+
   let favoriteFoodGuesses = 0;
   for (let i = 0; i < myFavoriteFoods.length; i++) {
     let oneFavoriteFood = myFavoriteFoods[i];
