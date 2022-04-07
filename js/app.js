@@ -85,6 +85,7 @@ function q5(){
     alert('Please answer with Yes or No');
   }
 }
+q5();
 
 function q6(){
   function getRandomNumber(max) {
@@ -114,27 +115,29 @@ function q6(){
     alert(`Sorry, you have run out of guesses! My favorite number is ${randomNumber}.`);
   }
 }
+q6();
 
-
-let myFavoriteFoods = ['Steak', 'Pizza', 'Ice Cream', 'Korean BBQ', 'Orange Chicken', 'Gnocchi', 'Cheesecake', 'Anything with cheese'];
-
-let questionSeven = prompt('Try to guess a favorite food of mine');
-
-let favoriteFoodGuesses = 0;
-for (let i = 0; i < myFavoriteFoods.length; i++) {
-  let oneFavoriteFood = myFavoriteFoods[i];
-  if (questionSeven !== oneFavoriteFood && favoriteFoodGuesses < 7) {
-    prompt('Nope, guess again.');
-    favoriteFoodGuesses++;
-  } else if (questionSeven === oneFavoriteFood) {
-    alert(`Correct! ${oneFavoriteFood} is one of my favorite foods!`);
-    numberOfCorrectAnswers++;
-    break;
-  } else {
-    alert(`Sorry, you've run out of guesses. Here is a list of some of my favorite foods: ${myFavoriteFoods}.`);
+function q7(){
+  let myFavoriteFoods = ['Steak', 'Pizza', 'Ice Cream', 'Korean BBQ', 'Orange Chicken', 'Gnocchi', 'Cheesecake', 'Anything with cheese'];
+  
+  let questionSeven = prompt('Try to guess a favorite food of mine');
+  
+  let favoriteFoodGuesses = 0;
+  for (let i = 0; i < myFavoriteFoods.length; i++) {
+    let oneFavoriteFood = myFavoriteFoods[i];
+    if (questionSeven !== oneFavoriteFood && favoriteFoodGuesses < 7) {
+      prompt('Nope, guess again.');
+      favoriteFoodGuesses++;
+    } else if (questionSeven === oneFavoriteFood) {
+      alert(`Correct! ${oneFavoriteFood} is one of my favorite foods!`);
+      numberOfCorrectAnswers++;
+      break;
+    } else {
+      alert(`Sorry, you've run out of guesses. Here is a list of some of my favorite foods: ${myFavoriteFoods}.`);
+    }
   }
 }
-
+q7();
 
 alert(`Thanks for playing along, ${siteVisitor}! You answered ${numberOfCorrectAnswers} questions correctly out of 7! Feel free to browse this page of mine now and learn a little more about me!`);
 
