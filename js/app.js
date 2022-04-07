@@ -71,45 +71,50 @@ function q4(){
 }
 q4();
 
-let questionFive = prompt('Do I prefer pineapple on my pizza?');
-if (questionFive === 'yes' || questionFive === 'y') {
-  //console.log('Ewww! No! I most certainly do not like pineapple on my pizza.');
-  alert('Ewww! No! I most certainly do not like pineapple on my pizza.');
-} else if (questionFive === 'no' || questionFive === 'n') {
-  //console.log('You, my friend, are correct! I do NOT like pineapple on my pizza!');
-  alert('You, my friend, are correct! I do NOT like pineapple on my pizza!');
-  numberOfCorrectAnswers++;
-} else {
-  //console.log('Please answer with Yes or No');
-  alert('Please answer with Yes or No');
-}
-
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max);
-}
-
-let questionSix = prompt('Guess my favorite number');
-
-let randomNumber = getRandomNumber(10);
-console.log(randomNumber);
-let numberOfAttempts = 0;
-
-while (questionSix !== randomNumber && numberOfAttempts < 5) {
-  if (questionSix < randomNumber) {
-    questionSix = prompt('Too low, guess again.');
+function q5(){
+  let questionFive = prompt('Do I prefer pineapple on my pizza?');
+  if (questionFive === 'yes' || questionFive === 'y') {
+    //console.log('Ewww! No! I most certainly do not like pineapple on my pizza.');
+    alert('Ewww! No! I most certainly do not like pineapple on my pizza.');
+  } else if (questionFive === 'no' || questionFive === 'n') {
+    //console.log('You, my friend, are correct! I do NOT like pineapple on my pizza!');
+    alert('You, my friend, are correct! I do NOT like pineapple on my pizza!');
+    numberOfCorrectAnswers++;
+  } else {
+    //console.log('Please answer with Yes or No');
+    alert('Please answer with Yes or No');
   }
-  if (questionSix > randomNumber) {
-    questionSix = prompt('Too high, guess again');
-  }
-  numberOfAttempts ++;
 }
 
-if (questionSix === randomNumber) {
-  alert(`Nice guess! It is ${randomNumber}! It took you ${numberOfAttempts} to guess correctly.`);
-  numberOfCorrectAnswers++;
-} else {
-  alert(`Sorry, you have run out of guesses! My favorite number is ${randomNumber}.`);
+function q6(){
+  function getRandomNumber(max) {
+    return Math.floor(Math.random() * max);
+  }
+  
+  let questionSix = prompt('Guess my favorite number');
+  
+  let randomNumber = getRandomNumber(10);
+  console.log(randomNumber);
+  let numberOfAttempts = 0;
+  
+  while (questionSix !== randomNumber && numberOfAttempts < 5) {
+    if (questionSix < randomNumber) {
+      questionSix = prompt('Too low, guess again.');
+    }
+    if (questionSix > randomNumber) {
+      questionSix = prompt('Too high, guess again');
+    }
+    numberOfAttempts ++;
+  }
+  
+  if (questionSix === randomNumber) {
+    alert(`Nice guess! It is ${randomNumber}! It took you ${numberOfAttempts} to guess correctly.`);
+    numberOfCorrectAnswers++;
+  } else {
+    alert(`Sorry, you have run out of guesses! My favorite number is ${randomNumber}.`);
+  }
 }
+
 
 let myFavoriteFoods = ['Steak', 'Pizza', 'Ice Cream', 'Korean BBQ', 'Orange Chicken', 'Gnocchi', 'Cheesecake', 'Anything with cheese'];
 
