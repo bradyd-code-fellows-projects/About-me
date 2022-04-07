@@ -39,19 +39,23 @@ function q2(){
 }
 q2();
 
-let questionThree = prompt('Do I have any siblings?');
-if (questionThree === 'yes'|| questionThree === 'y') {
-  //console.log('Yeah! I have 1 older sister, who is a nurse practitioner!');
-  alert('Yeah! I have 1 older sister, who is a nurse practitioner!');
-  numberOfCorrectAnswers++;
-} else if (questionThree === 'no' || questionThree === 'n') {
-  //console.log('Actually I do! I have 1 older sister, who is a nurse practitioner!');
-  alert('Actually I do! I have 1 older sister, who is a nurse practitioner!');
-} else {
-  //console.log('Please answer with Yes or No');
-  alert('Please answer with Yes or No');
+function q3(){
+  let questionThree = prompt('Do I have any siblings?');
+  if (questionThree === 'yes'|| questionThree === 'y') {
+    //console.log('Yeah! I have 1 older sister, who is a nurse practitioner!');
+    alert('Yeah! I have 1 older sister, who is a nurse practitioner!');
+    numberOfCorrectAnswers++;
+  } else if (questionThree === 'no' || questionThree === 'n') {
+    //console.log('Actually I do! I have 1 older sister, who is a nurse practitioner!');
+    alert('Actually I do! I have 1 older sister, who is a nurse practitioner!');
+  } else {
+    //console.log('Please answer with Yes or No');
+    alert('Please answer with Yes or No');
+  }
 }
+q3();
 
+function 
 let questionFour = prompt('Is it true that I have never served in the military?');
 if (questionFour === 'yes' || questionFour === 'y') {
   //console.log('Actually, it is true. I served in the U.S. Marine Corps from 2012 to 2016.');
