@@ -5,6 +5,8 @@ let numberOfCorrectAnswers = 0;
 let siteVisitor = prompt('Hey! What\'s your name?');
 alert(`Welcome ${siteVisitor}, let's play a guessing game. Please answer Yes or No`);
 
+function q1(){
+
 let questionOne = prompt('Was I born where I currently live, in Pueblo, Colorado?');
 if (questionOne === 'yes' || questionOne === 'y') {
   //console.log('That\'s correct! I was born and raised in Pueblo, Colorado');
@@ -17,19 +19,26 @@ if (questionOne === 'yes' || questionOne === 'y') {
   //console.log('Please answer with Yes or No');
   alert('Please answer with Yes or No');
 }
-
-let questionTwo = prompt('Do I have a pet bulldog?');
-if (questionTwo === 'yes' || questionTwo === 'y') {
-  //console.log('Well I do have a dog, but she\'s a German Shepherd!');
-  alert('Well I do have a dog, but she\'s a German Shepherd!');
-} else if (questionTwo === 'no' || questionTwo === 'n') {
-  //console.log('That\'s correct! I do not have a bulldog, rather, I have a German Shepherd!');
-  alert('That\'s correct! I do not have a bulldog, rather, I have a German Shepherd!');
-  numberOfCorrectAnswers++;
-} else {
-  //console.log('Please answer with Yes or No');
-  alert('Please answer with Yes or No');
 }
+q1();
+
+function q2(){
+
+  let questionTwo = prompt('Do I have a pet bulldog?');
+  if (questionTwo === 'yes' || questionTwo === 'y') {
+    //console.log('Well I do have a dog, but she\'s a German Shepherd!');
+    alert('Well I do have a dog, but she\'s a German Shepherd!');
+  } else if (questionTwo === 'no' || questionTwo === 'n') {
+    //console.log('That\'s correct! I do not have a bulldog, rather, I have a German Shepherd!');
+    alert('That\'s correct! I do not have a bulldog, rather, I have a German Shepherd!');
+    numberOfCorrectAnswers++;
+  } else {
+    //console.log('Please answer with Yes or No');
+    alert('Please answer with Yes or No');
+  }
+}
+q2();
+
 let questionThree = prompt('Do I have any siblings?');
 if (questionThree === 'yes'|| questionThree === 'y') {
   //console.log('Yeah! I have 1 older sister, who is a nurse practitioner!');
