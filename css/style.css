@@ -1,23 +1,22 @@
 body, html {
-  height: 100%;
   background-image: url(/img/Maroon\ Bells.png);
-  background-size: 100%;
-  width: 100%;
-}
-
-body {
-  background-color: coral;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 header {
   background-color: aqua;
   margin-bottom: 50px;
-  width: 100%
-  outline-style: dotted;
+  width: 100%;
+  opacity: 80%;
+  height: 5vw;
+  width: 100vw;
+  font-size: 50pt;
 }
 
 header h1 {
-  font-size: 60pt;
+  font-size: inherit;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -25,6 +24,7 @@ main {
   background-color: crimson;
   border-style: solid;
   border-color: aliceblue;
+  opacity: 90%
 }
 
 div {
@@ -37,7 +37,7 @@ div {
 div img {
   max-width: 10vw;
   max-height: 100vw;
-  float: left;
+  float: right;
   margin-right: 10px;
 }
 
