@@ -24,3 +24,7 @@
 ## lab-04
 
 Brady navigated, Katharine drove.
+
+## lab-05
+
+Cleaned up app.js, prepared for deployment
